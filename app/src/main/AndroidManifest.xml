@@ -21,7 +21,8 @@
         <activity android:name=".SellerLogin" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".ResetPasswordActivity" />
-        <activity android:name=".SellerHome"></activity>
+        <activity android:name=".SellerHome" />
+        <activity android:name=".Items" />
     </application>
 
 </manifest>
