@@ -28,12 +28,12 @@ public class SellerLogin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        auth = FirebaseAuth.getInstance();
-//
-//        if (auth.getCurrentUser() != null) {
-//            startActivity(new Intent(SellerLogin.this, Aboutus.class));
-//            finish();
-//        }
+        auth = FirebaseAuth.getInstance();
+
+        if (auth.getCurrentUser() != null) {
+            startActivity(new Intent(SellerLogin.this, SellerHome.class));
+            finish();
+        }
         setContentView(R.layout.activity_seller_login);
         inputEmail = (EditText) findViewById(R.id.email);
         inputPassword = (EditText) findViewById(R.id.password);
@@ -94,7 +94,7 @@ public class SellerLogin extends AppCompatActivity {
                                         Toast.makeText(SellerLogin.this, "authentication failed", Toast.LENGTH_LONG).show();
                                     }
                                 } else {
-                                    Intent intent = new Intent(SellerLogin.this, Aboutus.class);
+                                    Intent intent = new Intent(SellerLogin.this, SellerHome.class);
                                     startActivity(intent);
                                     finish();
                                 }
