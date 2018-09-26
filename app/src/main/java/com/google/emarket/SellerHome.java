@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class SellerHome extends AppCompatActivity {
 
     private FirebaseAuth auth;
-    private ImageButton Logout,items;
+    private ImageButton Logout,items,profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,14 @@ public class SellerHome extends AppCompatActivity {
         auth=FirebaseAuth.getInstance();
         Logout=(ImageButton)findViewById(R.id.ibLogout);
         items=(ImageButton)findViewById(R.id.ibItem);
+        profile=(ImageButton)findViewById(R.id.ibProfile) ;
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(SellerHome.this,ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
         items.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
